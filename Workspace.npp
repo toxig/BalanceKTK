@@ -1,0 +1,113 @@
+<NotepadPlus>
+    <Project name="BalanceKTK_Web">
+        <Folder name="Balance_srv">
+            <File name="Balance_srv\balance.pl" />
+            <File name="Balance_srv\httpd_paygw.conf" />
+            <File name="Balance_srv\index.html" />
+        </Folder>
+        <Folder name="error">
+            <Folder name="resources">
+                <File name="error\resources\error.css" />
+                <File name="error\resources\favicon.ico" />
+                <File name="error\resources\hole.jpg" />
+                <File name="error\resources\security_lock.png" />
+            </Folder>
+            <File name="error\HTTP_FORBIDDEN.html" />
+            <File name="error\HTTP_NOT_FOUND.html" />
+            <File name="error\index.html" />
+        </Folder>
+        <Folder name="img">
+            <Folder name="nums">
+                <File name="img\nums\0.png" />
+                <File name="img\nums\0@2x.png" />
+                <File name="img\nums\1.png" />
+                <File name="img\nums\1@2x.png" />
+                <File name="img\nums\2.png" />
+                <File name="img\nums\2@2x.png" />
+                <File name="img\nums\3.png" />
+                <File name="img\nums\3@2x.png" />
+                <File name="img\nums\4.png" />
+                <File name="img\nums\4@2x.png" />
+                <File name="img\nums\5.png" />
+                <File name="img\nums\5@2x.png" />
+                <File name="img\nums\6.png" />
+                <File name="img\nums\6@2x.png" />
+                <File name="img\nums\7.png" />
+                <File name="img\nums\7@2x.png" />
+                <File name="img\nums\8.png" />
+                <File name="img\nums\8@2x.png" />
+                <File name="img\nums\9.png" />
+                <File name="img\nums\9@2x.png" />
+                <File name="img\nums\connect@2x.png" />
+                <File name="img\nums\connect_err@2x.png" />
+                <File name="img\nums\dash.png" />
+                <File name="img\nums\dash@2x.png" />
+                <File name="img\nums\empty.png" />
+                <File name="img\nums\empty@2x.png" />
+                <File name="img\nums\quest@2x.png" />
+                <File name="img\nums\up@2x.png" />
+            </Folder>
+            <Folder name="theme">
+                <File name="img\theme\ui-bg_glass_50_3baae3_1x400.png" />
+                <File name="img\theme\ui-bg_highlight-hard_70_000000_1x100.png" />
+                <File name="img\theme\ui-bg_highlight-soft_25_ffef8f_1x100.png" />
+                <File name="img\theme\ui-icons_2694e8_256x240.png" />
+                <File name="img\theme\ui-icons_3d80b3_256x240.png" />
+                <File name="img\theme\ui-icons_72a7cf_256x240.png" />
+                <File name="img\theme\ui-icons_8c8a8c_256x240.png" />
+            </Folder>
+            <File name="img\artlebedev-logo.png" />
+            <File name="img\beeround_72.png" />
+            <File name="img\button-bgr-l.png" />
+            <File name="img\button-bgr-r.png" />
+            <File name="img\button-big-bgr-l.png" />
+            <File name="img\button-big-bgr-r.png" />
+            <File name="img\desk-info-bar.png" />
+            <File name="img\desk-number-bar.png" />
+            <File name="img\footer-bgr.png" />
+            <File name="img\icons.png" />
+            <File name="img\login-other-cabs.png" />
+            <File name="img\login-web-cabs.png" />
+            <File name="img\loginpage-input-reg.png" />
+            <File name="img\logo-b2b.png" />
+            <File name="img\logo-b2c.png" />
+            <File name="img\office_mts.png" />
+        </Folder>
+        <Folder name="resources">
+            <Folder name="fonts">
+                <File name="resources\fonts\officinaserifc-bold-webfont.eot" />
+                <File name="resources\fonts\officinaserifc-bold-webfont.svg" />
+                <File name="resources\fonts\officinaserifc-bold-webfont.ttf" />
+                <File name="resources\fonts\officinaserifc-bold-webfont.woff" />
+                <File name="resources\fonts\officinaserifc-book-webfont.eot" />
+                <File name="resources\fonts\officinaserifc-book-webfont.svg" />
+                <File name="resources\fonts\officinaserifc-book-webfont.ttf" />
+                <File name="resources\fonts\officinaserifc-book-webfont.woff" />
+            </Folder>
+            <File name="resources\analytics.js" />
+            <File name="resources\balance.js" />
+            <File name="resources\beanvalidation.xhtml" />
+            <File name="resources\date.format.js" />
+            <File name="resources\favicon.ico" />
+            <File name="resources\gmetrics.js" />
+            <File name="resources\gtm.js" />
+            <File name="resources\jquery-plugins.xhtml" />
+            <File name="resources\jquery.js" />
+            <File name="resources\jquery.xhtml" />
+            <File name="resources\login.js" />
+            <File name="resources\login_org.js" />
+            <File name="resources\officina.css" />
+            <File name="resources\primefaces.css" />
+            <File name="resources\primefaces.xhtml" />
+            <File name="resources\scriptjava.js" />
+            <File name="resources\search.js" />
+            <File name="resources\styles.css" />
+            <File name="resources\styles_orig.css" />
+            <File name="resources\theme.css" />
+            <File name="resources\validation.xhtml" />
+            <File name="resources\watch.js" />
+            <File name="resources\welcome-b2c.css" />
+        </Folder>
+        <File name="index.htm" />
+    </Project>
+</NotepadPlus>
