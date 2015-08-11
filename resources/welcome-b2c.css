@@ -1,0 +1,238 @@
+div.login-page{
+	width:990px
+}
+
+div.header-not-logged-in,.b2c-content-bgr,.b2b-content{
+	width:850px;
+	margin:0 auto
+}
+
+div.header-not-logged-in{
+	position:relative
+}
+
+div.header-not-logged-in div.login-lang-select{
+	right:3px;
+	top:29px;
+	left:auto
+}
+
+.login-page div.main-heading{
+	margin-left:270px
+}
+
+.login-page div.b2c-content{
+	background:0
+}
+
+div.magic{
+	width:804px;
+	height:275px;
+	margin:20px auto 0 auto;
+	background:url('../../img/public/welcome/welcome-magic.jpg?v=7_0_8_29243') left top no-repeat;
+	position:relative;
+	z-index:1;
+	padding-right:70px
+}
+
+div.magic h2{
+	position:absolute;
+	top:46px;
+	left:242px;
+	margin:0;
+	font-size:41px
+}
+
+div.magic div.text{
+	font-family:officinaserifcregular;
+	font-size:18px;
+	width:460px;
+	text-align:center;
+	position:absolute;
+	left:208px;
+	top:150px
+}
+
+div.magic div.text a{
+	text-decoration:none;
+	border-bottom:1px dotted;
+	outline:0
+}
+
+div.b2c-welcome div.slide{
+	text-align:center;
+	margin:50px 0
+}
+
+div.b2c-welcome div.slide h3{
+	font-family:officinaserifcbold;
+	margin-top:0;
+	font-weight:normal
+}
+
+div.b2c-welcome div.slide div.text{
+	margin-bottom:20px;
+	font-size:12px
+}
+
+div.b2c-welcome div.slide div.images{
+	overflow:hidden
+}
+
+div.b2c-welcome div.slide div.images img{
+	display:block;
+	margin:0 auto
+}
+
+div.b2c-welcome div.slide ul.slide-menu{
+	margin:0;
+	padding:0;
+	list-style:none
+}
+
+div.b2c-welcome div.slide ul.slide-menu li{
+	display:inline-block;
+	width:222px;
+	height:190px;
+	margin:0 5px;
+	vertical-align:top;
+	cursor:pointer
+}
+
+*+html div.b2c-welcome div.slide ul.slide-menu li{
+	display:inline;
+	zoom:1
+}
+
+div.b2c-welcome div.slide ul.slide-menu li:hover{
+	background:url('../../img/public/welcome/slide-item-bgr-hov.png?v=7_0_8_29243') left top no-repeat
+}
+
+div.b2c-welcome div.slide ul.slide-menu li.active{
+	background:url('../../img/public/welcome/slide-item-bgr-a.png?v=7_0_8_29243') no-repeat!important;
+	cursor:default
+}
+
+div.b2c-welcome div.slide ul.slide-menu li div.inner{
+	padding-top:80px
+}
+
+div.b2c-welcome div.slide ul.slide-menu li h4{
+	font-family:officinaserifcbold;
+	font-size:17px;
+	margin:0 0 10px 0;
+	font-weight:normal
+}
+
+div.b2c-welcome div.slide ul.slide-menu li div.descr{
+	font-size:12px;
+	padding:0 16px
+}
+
+div.b2c-welcome div.slide ul.slide-menu li.item-detalization div.inner{
+	background:url('../../img/public/welcome/icon-detalization.png?v=7_0_8_29243') 50% 34px no-repeat
+}
+
+div.b2c-welcome div.slide ul.slide-menu li.item-payment div.inner{
+	background:url('../../img/public/welcome/icon-payment.png?v=7_0_8_29243') 50% 24px no-repeat
+}
+
+div.b2c-welcome div.slide ul.slide-menu li.item-billcompare div.inner{
+	background:url('../../img/public/welcome/icon-billcompare.png?v=7_0_8_29243') 50% 30px no-repeat
+}
+
+div.b2c-welcome div.slide ul.slide-menu li.item-control div.inner{
+	background:url('../../img/public/welcome/icon-control.png?v=7_0_8_29243') 50% 34px no-repeat
+}
+
+div.b2c-welcome div.slide ul.slide-menu li.item-onenum div.inner{
+	background:url('../../img/public/welcome/icon-onenum.png?v=7_0_8_29243') 50% 26px no-repeat
+}
+
+div.b2c-welcome div.slide ul.slide-menu li.item-multiplenum div.inner{
+	background:url('../../img/public/welcome/icon-multiplenum.png?v=7_0_8_29243') 50% 26px no-repeat
+}
+
+div.b2c-welcome div.slide ul.slide-menu li.item-blocking div.inner{
+	background:url('../../img/public/welcome/icon-blocking.png?v=7_0_8_29243') 50% 25px no-repeat
+}
+
+div.b2c-welcome div.slide-tariff{
+	height:619px;
+	position:relative;
+	text-align:left;
+	margin-left:40px;
+	margin-right:40px
+}
+
+div.b2c-welcome div.slide-tariff div.images{
+	position:absolute;
+	top:0;
+	right:0;
+	width:525px
+}
+
+div.b2c-welcome div.slide-tariff h3{
+	padding-top:40px
+}
+
+div.b2c-welcome div.slide-tariff div.curve1{
+	width:76px;
+	height:35px;
+	background:url('../../img/public/welcome/slide-tariff-curve1.png?v=7_0_8_29243') no-repeat;
+	position:absolute;
+	top:255px;
+	left:340px
+}
+
+div.b2c-welcome div.slide-tariff div.curve2{
+	width:86px;
+	height:43px;
+	background:url('../../img/public/welcome/slide-tariff-curve2.png?v=7_0_8_29243') no-repeat;
+	position:absolute;
+	top:450px;
+	left:340px
+}
+
+div.b2c-welcome div.slide-tariff div.curve-text{
+	position:absolute;
+	right:572px;
+	background:#e8cf9b;
+	border-radius:6px;
+	font-size:12px;
+	padding:8px 13px
+}
+
+div.b2c-welcome div.slide-tariff div.text1{
+	top:295px
+}
+
+div.b2c-welcome div.slide-tariff div.text2{
+	top:383px
+}
+
+div.b2c-welcome div.try-it{
+	height:276px;
+	background:url('../../img/public/welcome/image-key.jpg?v=7_0_8_29243') 300px 0 no-repeat;
+	overflow:hidden;
+	padding-bottom:100px
+}
+
+div.b2c-welcome div.try-it h2{
+	font-family:officinaserifcregular;
+	font-size:41px;
+	font-weight:normal;
+	margin:100px 0 0 500px;
+	padding-bottom:1px
+}
+
+div.b2c-welcome div.try-it h2 span{
+	border-bottom:1px dashed;
+	cursor:pointer
+}
+
+div.b2c-welcome div.ui-outputpanel-loading{
+	margin:0 auto;
+	padding:50px 0;
+	background:url('../../img/ajax-loader.gif?v=7_0_8_29243') center center no-repeat
+}
