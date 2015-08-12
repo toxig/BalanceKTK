@@ -23,7 +23,7 @@ use Encode;
 ####################
 # DB Connect params
 ####################
-	my $avkdb_params = {
+	my $db_params = {
 		 'datasource'   => "dbi:Oracle:host=192.168.167.114;sid=atldb;port=1521",
 		 'username'	=> "MIGRNN",
 		 'password'	=> "PE8X6BWU8",
@@ -38,18 +38,46 @@ use Encode;
 	
 	printf "*** [db_connect]: User: %s\n",$db_params->{'username'};
 	
-    my $dbh
-     = DBI->connect(
-        $db_params->{'datasource'},
-        $db_params->{'username'},
-        $db_params->{'password'},
-        $db_params->{'attr'}) or die "Cannot connect !! to database: $DBI::errstr\n";
-    #$dbh->{oracle_auto_reconnect}=1;
+	my $seconds = 2;	
+	my $db_host = "192.168.167.114";
+	my $db_base = "atldb";
+	my $db_port = 1521;
+	my $db_user = "ACHERNIKOV";
+	my $db_password = "xsw23edc";
+	
+	my $i=0;
+	
+	eval {
+	  local $SIG{ALRM} = sub {die "timeout";};
+	   alarm(2);
+	   my $dbh = DBI->connect ( "dbi:Oracle:host=$db_host;sid=$db_base;port=$db_port",
+				  $db_user, $db_password,
+				    {PrintError=>1,RaiseError => 1} );				   	
 
-	if ($dbh) { 
-		{print "*** [db_connect]: DB Connected!\n";}		
-	} else 
-	{print "*** [db_connect]: DB NOT Connected!\n";}	
+    $i++ while 1;
+    				   
+	   alarm(0);
+	};
+  
+	if ( $@ ) {
+	   print "** Exit due to timeout: $i\n";
+	} 
+	else { print "** No errors: $i\n";}
+	
+	print $@;
+	
+    # my $dbh
+      # = DBI->connect(
+        # $db_params->{'datasource'},
+        # $db_params->{'username'},
+        # $db_params->{'password'},
+        # $db_params->{'attr'}) or die "Cannot connect !! to database: $DBI::errstr\n";
+    # $dbh->{oracle_auto_reconnect}=1;
+
+	# if ($dbh) { 
+		# {print "*** [db_connect]: DB Connected!\n";}		
+	# } else 
+	# {print "*** [db_connect]: DB NOT Connected!\n";}	
 	
 	print "Exit;";
 		
