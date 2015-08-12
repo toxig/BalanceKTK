@@ -1,0 +1,19 @@
+<response>
+  <request>
+    <client_ip>79.104.204.219</client_ip>
+    <reqlink>check.kubtelecom.ru/balance</reqlink>
+    <userid>2733581</userid>
+  </request>
+  <result>
+    <id_status>Без блокировок</id_status>
+    <id_type_name>Краснодар проводной тел. КУБ</id_type_name>
+    <msg>Подкючение: 8612733581</msg>
+    <nmbplan>КТК-Повременный ф.ВК</nmbplan>
+    <rbalance>706.2</rbalance>
+    <rc>1</rc>
+    <str>cobg: [8627331] conum: [5450260]</str>
+    <sum_abon>190</sum_abon>
+    <timestamp>2015.08.10 09:49:34</timestamp>
+    <user_uid>0861404317</user_uid>
+  </result>
+</response>
