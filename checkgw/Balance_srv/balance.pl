@@ -388,6 +388,8 @@ sub db_ask
     if( $debug ) { print "Reply structure:\n",Dumper($reply); }
 	if( $debug ) { printf "*** [db_ask] exit.\n"; }
 	
+	$dbh->disconnect;
+	
     return $reply; 	
 }
 #################################

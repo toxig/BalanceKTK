@@ -140,7 +140,7 @@ var request = new Object();
 		}				
 		else
 		{
-			document.getElementById("bar-numbers-header").innerHTML = "Результат:  " + value;
+			document.getElementById("bar-numbers-header").innerHTML = "Результат:"; // + value;
 			BarNumber_Set('r3','quest');
 		}
 	}
@@ -236,6 +236,7 @@ var request = new Object();
 				// $$(rq_resault_obj,'Result:<br>'	+ data +'<br>');
 				drawResData(data);				
 			},
+			timeout: 5000, // sets timeout to 3 seconds
 			endstatus: function (number) { // статус Ajax запроса
 				var now = new Date();
 				$$('desk-time-label',now.format("HH:MM:ss"));
@@ -244,11 +245,16 @@ var request = new Object();
 				}
 				else if(number == 404) {
 					$$(rq_resault_obj,'<br><br>Сервер недоступен, попробуйте позже ... <br>'+										
-										now.format("dd.mm.yyyy HH:MM:ss")+
-										'<br><br>link: '+window.location.href+rq_link+'<br>'
+										now.format("dd.mm.yyyy HH:MM:ss")
 					  );
 					  drawBalanceNum('conn_err');
-				}				
+				}
+				else if(number == 0) {
+					$$(rq_resault_obj,'<br><br>База недоступна, попробуйте позже ... <br>'+										
+										now.format("dd.mm.yyyy HH:MM:ss")
+					  );
+					  drawBalanceNum('conn_err');
+				}
 				else {
 					$$(rq_resault_obj,'<br><br><br>Ошибка ['+number+'] <br>'+now.format("dd.mm.yyyy HH:MM:ss"));
 					drawBalanceNum();
