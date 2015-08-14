@@ -87,11 +87,12 @@ sub do_check
     #** Process input data
 
     my $document = &get_http_input();
-    my $log_file = &log_req( $document, 'request' );
+    my $log_file;
     my $reqstr = $document; #&decrypt( $document, $gnupg, $input,$output,$error,$handles, $debug);
 
     unless ($reqstr)
     {
+	$log_file = &log_req( $document, 'request' );
 	print "Error: no input message\n";
 	exit;
     }
@@ -100,6 +101,9 @@ sub do_check
     my $request=XMLin( $reqstr, ForceArray=>0);	
 	$request->{'client_ip'} = $ENV{'REMOTE_ADDR'};	    
 	$request->{'reqlink'} = sprintf "%s%s",$ENV{'SERVER_NAME'},$ENV{'SCRIPT_NAME'};	
+	
+	my $xml_in = XMLout($request, RootName=>'request', NoAttr=>1, NoEscape=>1);
+	$log_file = &log_req( $xml_in, 'request' );
 	
     ### Get Reply from DB ###    
     #my $reply = &ask_avk( $request, $payment_source );	
@@ -366,6 +370,16 @@ sub db_ask
 	
 	# Connect Database
 	my $dbh = db_connect($avkdb_params);
+	#my $dbh = DBI->connect("dbi:Oracle:host=192.168.167.105;sid=atldb;port=1521","AChernikov","xsw23edc") || die "Database connection not made";
+		  #(DESCRIPTION = (ADDRESS = (PROTOCOL = TCP)(HOST = 192.168.167.105)(PORT = 1521)) (CONNECT_DATA = (SERVER = DEDICATED) #(SERVICE_NAME = atldb)))
+
+	unless ($dbh) {		
+		my $rep;
+		$rep->{'rc'} = -1;
+		$rep->{'msg'} = decode('utf8',"Сервер: ошибка подключения к Базе. Попробуйте позже...");
+		$rep->{'str'} = "DB Not connected [Ask DB]";	
+		return $rep;
+	}
 	
 	# Run Query and Get Query Reply
 	my $reply = db_query($dbh,\%args);
@@ -378,7 +392,7 @@ sub db_ask
 		$reply = \%dumb_perl;		
 		
 		$reply->{'rc'} = -1;
-		$reply->{'msg'} = decode('utf8',"Сервер: ошибка подключения к Базе. Попробуйте позже...");
+		$reply->{'msg'} = decode('utf8',"Сервер: ошибка запроса к Базе. Попробуйте позже...");
 		$reply->{'str'} = "Error Get reply from DB [Ask DB]";		
 		
 		my ($sec,$min,$hour,$mday,$mon,$year) = localtime(time);
@@ -476,9 +490,9 @@ sub log_req
     #my $log_path = '/usr/local/apache2/htdocs/check/balance_srv/history';    	
     #my $log_path = "$ENV{DOCUMENT_ROOT}/Balance_KTK/history";    
 	
-    if( $debug ) {		
-		printf "SCRIPT_FILENAME: %s\nSCRIPT_NAME: %s\nLOG_PATH: %s\n", $ENV{SCRIPT_FILENAME},$ENV{SCRIPT_NAME}, $log_path;
-	}       
+    #if( $debug ) {		
+	#	printf "SCRIPT_FILENAME: %s\nSCRIPT_NAME: %s\nLOG_PATH: %s\n", $ENV{SCRIPT_FILENAME},$ENV{SCRIPT_NAME}, $log_path;
+	#}       
 
     my($sec,$min,$hour,$mday,$mon,$year) = localtime(time);
 

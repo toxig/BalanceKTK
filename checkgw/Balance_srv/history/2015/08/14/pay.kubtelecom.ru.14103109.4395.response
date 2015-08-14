@@ -1,0 +1,19 @@
+<response>
+  <request>
+    <client_ip>213.132.79.134</client_ip>
+    <reqlink>pay.kubtelecom.ru/checkgw/balance</reqlink>
+    <userid>2730015</userid>
+  </request>
+  <result>
+    <id_status>Заблокирован</id_status>
+    <id_type_name>Краснодар проводной тел. КУБ</id_type_name>
+    <msg>Подкючение: 8612730015</msg>
+    <nmbplan>КТК-Комбинированный PSTN ф. ВК</nmbplan>
+    <rbalance>-704.61</rbalance>
+    <rc>1</rc>
+    <str>cobg: [8636156] conum: [5450574]</str>
+    <sum_abon>280</sum_abon>
+    <timestamp>2015.08.14 10:31:09</timestamp>
+    <user_uid>0861412795</user_uid>
+  </result>
+</response>
